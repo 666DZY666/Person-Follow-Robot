@@ -1,0 +1,24 @@
+<launch>
+  <node pkg="rbx1_apps" name="my_follower_new" type="my_follower_new.py" output="screen">
+    <remap from="point_cloud" to="/kinect2/sd/points"/>
+    
+    <rosparam>
+       min_x: -0.2
+       max_x: 0.2
+       min_y: -0.3
+       max_y: 0.5
+       max_z: 1.2
+       goal_z: 0.5
+       z_threshold: 0.015
+       x_threshold: 0.015
+       z_scale: 1.0
+       x_scale: 4.0
+       max_angular_speed: 4.0
+       min_angular_speed: 0.0
+       max_linear_speed: 0.26
+       min_linear_speed: 0.0
+    </rosparam>
+
+  </node>
+
+</launch>
